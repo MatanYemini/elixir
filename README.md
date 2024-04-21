@@ -93,6 +93,10 @@ Allows you to check web-related vulnerabilities
 
 - See all issues with how to solve them in k8s - `kubescape scan -v --format json --output ecv.json` [demo](https://kubescape.io/#demo)
 
+- Another tool worth considering is: Kubeshark [website](https://www.kubeshark.co/)
+
+- https://falco.org/
+
 ## SBOMS
 
 - Software Bill of Materials (SBOM) from container images and filesystems. Can be done with: [repo](https://github.com/anchore/syft) and [repo] (https://github.com/anchore/grype)

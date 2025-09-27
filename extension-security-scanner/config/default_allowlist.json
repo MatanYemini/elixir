@@ -1,0 +1,143 @@
+{
+  "comment": "Default allowlist of trusted extensions",
+  "allowlist": [
+    {
+      "id": "ms-vscode.cpptools",
+      "reason": "Official Microsoft C++ extension"
+    },
+    {
+      "id": "ms-python.python",
+      "reason": "Official Microsoft Python extension"
+    },
+    {
+      "id": "ms-python.vscode-pylance",
+      "reason": "Official Microsoft Python language server"
+    },
+    {
+      "id": "golang.go",
+      "reason": "Official Go extension"
+    },
+    {
+      "id": "rust-lang.rust-analyzer",
+      "reason": "Official Rust extension"
+    },
+    {
+      "id": "dbaeumer.vscode-eslint",
+      "reason": "Trusted ESLint extension"
+    },
+    {
+      "id": "esbenp.prettier-vscode",
+      "reason": "Trusted Prettier formatter"
+    },
+    {
+      "id": "eamodio.gitlens",
+      "reason": "Popular Git enhancement extension"
+    },
+    {
+      "id": "formulahendry.code-runner",
+      "reason": "Popular code execution extension"
+    },
+    {
+      "id": "ritwickdey.liveserver",
+      "reason": "Popular live server extension"
+    },
+    {
+      "id": "streetsidesoftware.code-spell-checker",
+      "reason": "Trusted spell checker"
+    },
+    {
+      "id": "ms-vscode-remote.remote-ssh",
+      "reason": "Official Microsoft Remote SSH"
+    },
+    {
+      "id": "ms-vscode-remote.remote-containers",
+      "reason": "Official Microsoft Dev Containers"
+    },
+    {
+      "id": "ms-vscode-remote.remote-wsl",
+      "reason": "Official Microsoft WSL extension"
+    },
+    {
+      "id": "ms-azuretools.vscode-docker",
+      "reason": "Official Microsoft Docker extension"
+    },
+    {
+      "id": "ms-kubernetes-tools.vscode-kubernetes-tools",
+      "reason": "Official Microsoft Kubernetes extension"
+    },
+    {
+      "id": "redhat.vscode-yaml",
+      "reason": "Red Hat YAML extension"
+    },
+    {
+      "id": "redhat.java",
+      "reason": "Red Hat Java extension"
+    },
+    {
+      "id": "github.copilot",
+      "reason": "Official GitHub Copilot"
+    },
+    {
+      "id": "github.copilot-chat",
+      "reason": "Official GitHub Copilot Chat"
+    },
+    {
+      "id": "github.vscode-pull-request-github",
+      "reason": "Official GitHub Pull Requests extension"
+    },
+    {
+      "id": "visualstudioexptteam.vscodeintellicode",
+      "reason": "Microsoft IntelliCode"
+    },
+    {
+      "id": "visualstudioexptteam.intellicode-api-usage-examples",
+      "reason": "Microsoft IntelliCode API Examples"
+    }
+  ],
+  "allowed_publishers": [
+    {
+      "name": "microsoft",
+      "reason": "Official Microsoft publisher"
+    },
+    {
+      "name": "ms-vscode",
+      "reason": "Official VS Code team"
+    },
+    {
+      "name": "ms-python",
+      "reason": "Official Microsoft Python team"
+    },
+    {
+      "name": "ms-azuretools",
+      "reason": "Official Microsoft Azure tools"
+    },
+    {
+      "name": "ms-kubernetes-tools",
+      "reason": "Official Microsoft Kubernetes tools"
+    },
+    {
+      "name": "ms-vscode-remote",
+      "reason": "Official Microsoft Remote Development"
+    },
+    {
+      "name": "github",
+      "reason": "Official GitHub"
+    },
+    {
+      "name": "golang",
+      "reason": "Official Go team"
+    },
+    {
+      "name": "rust-lang",
+      "reason": "Official Rust team"
+    },
+    {
+      "name": "redhat",
+      "reason": "Red Hat official publisher"
+    },
+    {
+      "name": "visualstudioexptteam",
+      "reason": "Visual Studio experimental team"
+    }
+  ]
+}

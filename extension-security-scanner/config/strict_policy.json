@@ -1,0 +1,96 @@
+{
+  "policies": {
+    "max_risk_score": 3,
+    "required_publisher_verification": true,
+    "blocked_permissions": [
+      "activation.always",
+      "terminal",
+      "debuggers",
+      "activation.filesystem",
+      "activation.uri",
+      "workspace"
+    ],
+    "allowed_publishers": [
+      "microsoft",
+      "github"
+    ],
+    "blocked_publishers": [],
+    "max_days_since_update": 180,
+    "min_install_count": 10000,
+    "allow_obfuscated_code": false,
+    "allow_network_calls": false,
+    "allow_file_operations": false,
+    "allow_code_injection": false,
+    "max_dependencies": 20,
+    "enforce_source_availability": true,
+    "require_documentation": true
+  },
+  "allowlist": [
+    {
+      "id": "ms-vscode.cpptools",
+      "reason": "Official Microsoft C++ extension"
+    },
+    {
+      "id": "ms-python.python",
+      "reason": "Official Microsoft Python extension"
+    },
+    {
+      "id": "dbaeumer.vscode-eslint",
+      "reason": "Trusted ESLint extension"
+    },
+    {
+      "id": "esbenp.prettier-vscode",
+      "reason": "Trusted Prettier formatter"
+    },
+    {
+      "publisher": "microsoft",
+      "reason": "All Microsoft extensions are trusted"
+    }
+  ],
+  "blocklist": [
+    {
+      "pattern": ".*\\.test$",
+      "reason": "Block all test extensions in production"
+    },
+    {
+      "pattern": ".*-beta$",
+      "reason": "Block all beta extensions"
+    },
+    {
+      "pattern": ".*-alpha$",
+      "reason": "Block all alpha extensions"
+    }
+  ],
+  "custom_rules": [
+    {
+      "type": "threshold",
+      "field": "analysis.dependency_analysis.total_dependencies",
+      "operator": "gt",
+      "value": 50,
+      "action": "block",
+      "message": "Extension has too many dependencies (>50)"
+    },
+    {
+      "type": "threshold",
+      "field": "risk_score",
+      "operator": "gte",
+      "value": 5,
+      "action": "block",
+      "message": "Risk score exceeds strict threshold"
+    },
+    {
+      "type": "contains",
+      "field": "permissions",
+      "value": "activation.always",
+      "action": "block",
+      "message": "Extension activates on all events - not allowed in strict mode"
+    },
+    {
+      "type": "regex",
+      "field": "publisher",
+      "pattern": "^(unknown|local)$",
+      "action": "block",
+      "message": "Unknown or local publishers not allowed"
+    }
+  ]
+}

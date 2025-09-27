@@ -1,0 +1,101 @@
+{
+  "comment": "This file contains patterns of known malicious extensions for reference",
+  "malicious_patterns": [
+    {
+      "name": "Credential Harvester",
+      "indicators": [
+        "Reads SSH private keys",
+        "Accesses browser cookie databases",
+        "Sends data to unknown domains",
+        "Uses eval with base64 decoded content"
+      ],
+      "code_patterns": [
+        "fs.readFileSync.*\\.ssh.*id_rsa",
+        "chrome\\.cookies\\.getAll",
+        "fetch.*atob\\(",
+        "eval\\(atob\\("
+      ]
+    },
+    {
+      "name": "Crypto Miner",
+      "indicators": [
+        "High CPU usage patterns",
+        "WebSocket connections to mining pools",
+        "Obfuscated JavaScript",
+        "Hidden worker threads"
+      ],
+      "code_patterns": [
+        "WebSocket.*mining",
+        "Worker.*cryptonight",
+        "_0x[a-f0-9]{4,}.*eval"
+      ]
+    },
+    {
+      "name": "Code Exfiltrator",
+      "indicators": [
+        "Reads all workspace files",
+        "Sends code to external servers",
+        "Activates on all events",
+        "No legitimate functionality"
+      ],
+      "code_patterns": [
+        "vscode\\.workspace\\.findFiles\\(.*\\*\\*",
+        "readFile.*then.*fetch",
+        "activationEvents.*\\*"
+      ]
+    },
+    {
+      "name": "Backdoor",
+      "indicators": [
+        "Executes remote commands",
+        "Downloads and runs executables",
+        "Creates reverse shells",
+        "Modifies system files"
+      ],
+      "code_patterns": [
+        "child_process\\.exec.*\\$\\{",
+        "fs\\.writeFileSync.*/usr/bin",
+        "net\\.createConnection.*shell",
+        "require\\('http'\\).*on\\('data'.*eval"
+      ]
+    }
+  ],
+  "trusted_publishers": [
+    "microsoft",
+    "github",
+    "redhat",
+    "dbaeumer",
+    "esbenp",
+    "formulahendry",
+    "ritwickdey",
+    "streetsidesoftware",
+    "eamodio",
+    "msjsdiag",
+    "golang",
+    "rust-lang",
+    "ms-python",
+    "ms-vscode",
+    "ms-azuretools",
+    "ms-kubernetes-tools"
+  ],
+  "suspicious_domains": [
+    "*.tk",
+    "*.ml",
+    "*.ga",
+    "*.cf",
+    "pastebin.com",
+    "hastebin.com",
+    "bit.ly",
+    "tinyurl.com",
+    "grabify.link",
+    "iplogger.org",
+    "blasze.tk"
+  ],
+  "high_risk_permissions": [
+    "activation.always",
+    "terminal",
+    "debuggers",
+    "tasks.executeTask",
+    "workspace.fs.writeFile"
+  ]
+}

@@ -1,0 +1,44 @@
+# Core dependencies
+pathlib2>=2.3.5
+
+# For JSON and data handling
+jsonschema>=4.0.0
+
+# For HTML report generation
+jinja2>=3.0.0
+markupsafe>=2.0.0
+
+# For CSV handling (included in stdlib but listing for clarity)
+# csv module is built-in
+
+# For better path handling
+click>=8.0.0
+
+# For colored terminal output (optional but recommended)
+colorama>=0.4.4
+termcolor>=1.1.0
+
+# For progress bars during scanning
+tqdm>=4.62.0
+
+# For configuration file validation
+pyyaml>=6.0
+
+# For better datetime handling
+python-dateutil>=2.8.0
+
+# For parallel processing of extensions
+concurrent-futures>=3.1.0; python_version < '3.2'
+
+# For web-based reporting dashboard (optional)
+flask>=2.0.0
+
+# For security analysis enhancements
+python-magic>=0.4.24
+
+# Development dependencies (optional)
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950

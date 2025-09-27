@@ -1,0 +1,60 @@
+{
+  "scan_locations": {
+    "vscode": [
+      "~/.vscode/extensions",
+      "~/.vscode-insiders/extensions",
+      "~/.vscode-oss/extensions",
+      "~/.vscode-server/extensions",
+      "%USERPROFILE%\\.vscode\\extensions",
+      "%APPDATA%\\Code\\User\\extensions"
+    ],
+    "cursor": [
+      "~/.cursor/extensions",
+      "~/Library/Application Support/Cursor/User/extensions",
+      "%USERPROFILE%\\.cursor\\extensions",
+      "%APPDATA%\\Cursor\\User\\extensions"
+    ]
+  },
+  "policies": {
+    "max_risk_score": 8,
+    "required_publisher_verification": false,
+    "blocked_permissions": [],
+    "allowed_publishers": [
+      "microsoft",
+      "github",
+      "redhat",
+      "visualstudioexptteam"
+    ],
+    "blocked_publishers": [],
+    "max_days_since_update": 730,
+    "min_install_count": 0,
+    "allow_obfuscated_code": true,
+    "allow_network_calls": true,
+    "allow_file_operations": true,
+    "allow_code_injection": false,
+    "max_dependencies": 200,
+    "enforce_source_availability": false,
+    "require_documentation": false
+  },
+  "analysis": {
+    "check_permissions": true,
+    "check_dependencies": true,
+    "check_obfuscation": true,
+    "check_network_calls": true,
+    "check_file_access": true,
+    "check_code_injection": true
+  },
+  "reporting": {
+    "include_passed_checks": false,
+    "include_code_snippets": false,
+    "max_findings_per_extension": 20,
+    "group_by_risk_level": true
+  },
+  "scanning": {
+    "parallel_processing": true,
+    "max_workers": 4,
+    "timeout_per_extension": 30,
+    "skip_system_extensions": false,
+    "scan_vsix_files": false
+  }
+}
